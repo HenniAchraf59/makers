@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="utf-8" >
+  <link rel="stylesheet" href="style.css">
+  <title>Un syst&egrave;me d'onglet en javascript</title>
+  <!--scriptjava--->
+  <script type="text/javascript">
+  function change_onglet(name)
+  {
+    document.getElementById('onglet_'+anc_onglet).className = 'onglet_0 onglet';
+    document.getElementById('onglet_'+name).className = 'onglet_1 onglet';
+    document.getElementById('contenu_onglet_'+anc_onglet).style.display = 'none';
+    document.getElementById('contenu_onglet_'+name).style.display = 'block';
+    anc_onglet = name;
+  }
+  </script>
+  <!---head------------------------------->
+</head>
+<body>
+  <img class="picture" src="makers.jpg" alt="kids"/>
+  <h1>MagicMakers</h1>
+  <div class="systeme_onglets">
+    <div class="onglets">
+      <span class="onglet_0 onglet" id="onglet_accueil" onclick="javascript:change_onglet('accueil');">Accueil</span>
+      <span class="onglet_0 onglet" id="onglet_presentation" onclick="javascript:change_onglet('presentation');">Présentation</span>
+      <span class="onglet_0 onglet" id="onglet_demo" onclick="javascript:change_onglet('demo');">Démo</span>
+      <span class="onglet_0 onglet" id="onglet_createur" onclick="javascript:change_onglet('createur');">Créateur</span>
+      <span class="onglet_0 onglet" id="onglet_contact" onclick="javascript:change_onglet('contact');">Contact</span>
+    </div>
+    <div class="contenu_onglets">
+      <div class="contenu_onglet" id="contenu_onglet_accueil">
+
+        <!--partieaccueil--->
+        <h2>Accueil</h2>
+        <p>MagicMakers : Une approche pédagogique innovante<br/>
+          Dans ce site vous trouverez diverses informations utiles :
+          <ul class="list">
+            <li>-Le fonctionnement de l'école</li>
+            <li>-une petite vidéo immersive </li>
+            <li>-qui a crée le projet</li>
+            <li>-Nous contactez</li>
+          </ul>
+        </div>
+        <!--Présentation-------------------------------------------------------------------------------------------->
+        <div class="contenu_onglet" id="contenu_onglet_presentation">
+          <h2>Présentation</h2>
+          <p><span class="underline">Expérimenter</span><br/>
+            Les enfants créent leurs propres projets dans les ateliers, et coder se présente comme un moyen pour donner vie à leurs jeux.
+            Ils cherchent des solutions en expérimentant par eux-mêmes, en essayant et en recommençant. La programmation s’accompagne d’activités
+            manuelles « débranchées » comme des jeux de rôles ou de la manipulation d’objets, pour toujours faire le parallèle entre le monde virtuel
+            et la vraie vie.
+          </p>
+          <p><span class="underline">Des outils pensés pour l’apprentissage des enfants</span><br/>
+            Magic Makers utilise notamment Scratch, un langage de programmation pensé pour les enfants. Ici, coder c’est assembler des blocs comme
+            des Légos. Développé par le Lifelong KinderGarten du Média Lab au MIT, Scratch a permis la création de plus de 5 millions de projets
+            partout dans le monde.Makey Makey, Robots Légos ou encore caméra Kinect, sont autant d’objets avec lesquels Scratch se combine, et qui
+            ouvrent d’innombrables perspectives pour apprendre et s’amuser.L’approche pédagogique s’appuie sur les travaux de la ScratchEd Team, menés par
+            Karen Brennan de la Harvard Graduate School of Education.</p>
+          </div>
+          <!--demonstration----------------------------------------------------------------------------------------------->
+          <div class="contenu_onglet" id="contenu_onglet_demo">
+            <h2>Démonstration</h2>
+            <p> Nous allons voir comment se deroule les ateliers : </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wXXQcrrioe0" frameborder="0" allowfullscreen></iframe>
+
+          </div>
+          <!--createur---------------------------------------------------------------------------------------------------->
+          <div class="contenu_onglet" id="contenu_onglet_createur">
+            <h2>Claude Terosier</h2>
+            <img class="claude" src="claude.jpg" alt="la fondatrice"><p>Claude est maman de 2 enfants. Frappée de de rien trouver lorsqu’elle
+              a cherché des ateliers de code pour enfants, elle décide de se lancer dans l’aventure et de créer elle-même Magic
+              Makers. Ingénieur Telecom ParisTech, elle saisit cette opportunité pour changer de métier et de contribuer à
+              développer l’apprentissage de la programmation créative en France.</p>
+
+            </div>
+            <!--contact------------------------------------------------------------------------------------------------------->
+            <div class="contenu_onglet" id="contenu_onglet_contact">
+              <h2>Contact</h2>
+              <p>Magic Makers</p>
+               <p>Siège Social<br>
+               153 bis rue de la Croix-Nivert<br>
+               75015 Paris</p>
+            </div>
+          </div>
+        </div>
+        <!--fin des parties---------------------------------------------------------------------------------------------------->
+        <script type="text/javascript">
+        //<!--
+        var anc_onglet = 'accueil';
+        change_onglet(anc_onglet);
+        //-->
+        </script>
+      </body>
+      </html>
